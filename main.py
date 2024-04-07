@@ -16,8 +16,8 @@ stuff = {
 }
 
 skills = {
-    'Endurance': 5  # Higher means lower chance to encounter hostile enemies (Not functional)
-    'Dexterity': 5  # Higher means more shots per turn
+    'Endurance': 5,  # Higher means lower chance to encounter hostile enemies (Not functional)
+    'Dexterity': 5,  # Higher means more shots per turn
     'Health': 5  # Higher means chance to receive reduced damage (Not functional)
 }
 
