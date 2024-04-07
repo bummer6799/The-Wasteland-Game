@@ -21,41 +21,25 @@ skills = {
     'Health': 5  # Higher means chance to receive reduced damage (Not functional)
 }
 
+
 def sleepcls():
     time.sleep(0.5)
     os.system('cls')
+
 
 def home(locations):
     print('Home')
     for location, turns in locations.items():
         print('{} ({} turns)'.format(location, turns))
 
+
 def inventory(stuff):
     print('You currently have')
     for slot, item in stuff.items():
-        print('{}:{}'.format(slot,item))
-
-def world():
-    print('The human nature never changes.')
-    sleepcls()
-    print('There are no winners or losers.')
-    sleepcls()
-    print('Only those who live and those dont.')
-    sleepcls()
-
-    input('Press enter to continue')
-    home(locations)
-    print('i) Inventory')
+        print('{}: {}'.format(slot, item))
 
 
-if menu == '1':
-    world()
-elif menu == '2':
-    quit()
-else:
-    print('Not an option')
-
-def home():
+def homechoices():
     choice = input()
     if choice == '1':
         print('Ugh, I got a long day ahead of me..')
@@ -72,6 +56,41 @@ def home():
         inventory(stuff)
         input('Press enter to continue')
         os.system('cls')
-        home()
+        homechoices()
     else:
         print('Where the hell would that be?')
+
+
+def city():
+    print('debug end')
+
+
+def village():
+    print('debug end')
+
+
+def scrapyard():
+    print('debug end')
+
+
+def loading():
+    print('The human nature never changes.')
+    sleepcls()
+    print('There are no winners or losers.')
+    sleepcls()
+    print('Only those who live and those dont.')
+    sleepcls()
+
+    input('Press enter to continue')
+    home(locations)
+    print('i) Inventory')
+
+
+if menu == '1':
+    loading()
+elif menu == '2':
+    quit()
+else:
+    print('Not an option')
+
+homechoices()
