@@ -56,9 +56,12 @@ def homechoices():
         inventory(stuff)
         input('Press enter to continue')
         os.system('cls')
+        home(locations)
+        print('i) Inventory')
         homechoices()
     else:
         print('Where the hell would that be?')
+        homechoices()
 
 
 def city():
